@@ -16,7 +16,7 @@ object Programming1 {
     )
 
   val SCALA3 = Seq(
-      ThisBuild / scalaVersion := "3.7.2",                   // scalac コンパイラのバージョン
+      ThisBuild / scalaVersion := "3.9.0",                   // scalac コンパイラのバージョン
       Compile / scalaSource := baseDirectory.value / "src",  // Scala のソース置き場のディレクトリ
       //resourceDirectory := baseDirectory.value / "resources",
       scalacOptions := Seq(
@@ -32,20 +32,20 @@ object Programming1 {
       Test / scalaSource := baseDirectory.value / "test",
 
       // 以下は [ScalaTest についての設定](https://www.scalatest.org/install)
-      libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15",
+      libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.20",
 
       // test configuration のみに scalatest を読み込む（ライブラリ依存性 / マネージ依存性）
-      libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15" % "test",
+      libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.20" % "test",
     )
 
   val SCALA_FX = Seq(
       // ScalaFX の設定についてはさんざ苦労した。詳しくは Zettelkasten を参照のこと。
       // https://mvnrepository.com/artifact/org.scalafx/scalafx
-      libraryDependencies += "org.scalafx" %% "scalafx" % "19.0.0-R30",
+      libraryDependencies += "org.scalafx" %% "scalafx" % "22.0.0-R33",
       // https://mvnrepository.com/artifact/org.scalafx/scalafx-extras
-      libraryDependencies += "org.scalafx" %% "scalafx-extras" % "0.7.0",
+      libraryDependencies += "org.scalafx" %% "scalafx-extras" % "0.9.0",
     )
 
   val Scala3 = COMMON ++ SCALA3 ++ SCALA_TEST
-  val Scala3FX = SCALA3 ++ SCALA_FX
+  val Scala3FX = COMMON ++ SCALA3 ++ SCALA_FX
 }
