@@ -1,5 +1,9 @@
 .*
 !.gitignore
+!.vscode/
+.vscode/*
+!.vscode/settings.json
+# sbt が生成するファイル（project/build.properties などの定義ファイルは追跡する）
 project/metals.sbt
 project/project/
 target/
