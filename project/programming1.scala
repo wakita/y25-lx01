@@ -19,7 +19,7 @@ object Programming1 {
       ThisBuild / scalaVersion := "3.9.0",                   // scalac コンパイラのバージョン
       Compile / scalaSource := baseDirectory.value / "src",  // Scala のソース置き場のディレクトリ
       //resourceDirectory := baseDirectory.value / "resources",
-      scalacOptions := Seq(
+      scalacOptions ++= Seq(
         "-explain",
         //"-deprecate",
         "-Werror",                                         // 警告をエラーとして扱う
@@ -39,7 +39,6 @@ object Programming1 {
     )
 
   val SCALA_FX = Seq(
-      // ScalaFX の設定についてはさんざ苦労した。詳しくは Zettelkasten を参照のこと。
       // https://mvnrepository.com/artifact/org.scalafx/scalafx
       libraryDependencies += "org.scalafx" %% "scalafx" % "22.0.0-R33",
       // https://mvnrepository.com/artifact/org.scalafx/scalafx-extras

@@ -10,6 +10,4 @@ def main = {
   println("プログラミング第一へようこそ！")
   println("講義担当は脇田 建（わきた けん）です。")
   println("演習担当は七島 幹人（ななしま みきと）です。")
-  println("Hello3")
-  println("Hello3 --- Hello, hello, hello!")
 }
