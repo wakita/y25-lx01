@@ -6,6 +6,11 @@
         "**/.bloop": true,
         "**/.bsp": true,
         "**/.metals": true,
-        "**/.scala-build": true
+        "**/.scala-build": true,
+        "prg1": true,
+        "simple": true,
+        "project/project/": true,
+        "project/target/": true,
+        "target": true
     }
 }
