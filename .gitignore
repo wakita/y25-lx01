@@ -9,6 +9,8 @@ project/project/
 target/
 
 *.class
+# fix/ で scalac を実行すると生成される (package 名 prg1.lx01... のディレクトリ)
+prg1/
 *.log
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
